@@ -1,0 +1,36 @@
+<div class="section">
+  <div class="container">
+    <h2>Login</h2>
+    <form class="userForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    
+      <div class="row">
+        <div class="col-sm">
+          <label class="customlabel"> Email </label>
+          <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm">
+          <label class="customlabel">  Password </label>
+          <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+        </div>
+      </div>
+
+
+    <button class="customBtn" type="submit" >Submit</button>
+    </form>
+
+    <a routerLink="/registration">Registration</a>
+  </div>
+</div>
+
+<!-- snack bar for server messages -->
+<ngx-snackbar  [position]="'top-right'" [max]="3"  [timeout]="5000" [color]="'#fff'"> </ngx-snackbar>

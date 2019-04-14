@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Muli', sans-serif;
+}
+body,html{
+    background-color: #F8F9F9;
+}
+
+.userForm{
+    text-align: center;
+}
+
+.customlabel{
+    font-size: 20px;
+    display: block;
+    margin-top:20px;
+    font-style: italic;
+}
+.form-control{
+    display: initial!important;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+    border-radius: 20px;
+    width: 60%;
+    border:1px solid #2980B9;
+
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="eamil"]:focus{
+    border-radius: 20px;
+    width: 60%;
+    border:1px solid #2980B9;
+
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="eamil"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+}
+.customBtn{
+    margin-top:40px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #2980B9 ;
+    border: 0px;
+    color: #fff;
+    min-width: 100px;
+    margin-bottom: 10px;
+}
